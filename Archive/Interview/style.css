@@ -90,6 +90,7 @@
 }
 
 @media screen and (min-width: 761px) {
+    /* big screen */
     #wrapper {
         margin: 1.5em 0.3em 4em;
         padding: 2em;
