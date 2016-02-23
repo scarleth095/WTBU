@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title> WTBU Radio</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="WTBU website">
+      <meta name="author" content="Scarleth Estevez">
+      <link rel="icon" href="../../drawing.png">
+      <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+      <link href='https://fonts.googleapis.com/css?family=Orbitron:400,700,900,500' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="../bootstrap-social.css">
+   </head>
+   <body style="background-color:#f2f2f2">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>                        
+               </button>
+               <a class="navbar-brand" href="../../index.html"><span class="spacing"><font color ="#bf2e26">WTBU RADIO</font></span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+               <ul class="nav navbar-nav">
+                  <li><a href="../../index.html">Home</a></li>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="">Programming <span class="caret"></span></a>
+                     <ul class="dropdown-menu">
+                        <li><a href="../../Programming_Schedule/index.html">Schedule</a></li>
+                        <li><a href="../../Studio-Sessions/index.html">Studio Sessions</a></li>
+                        <li><a href="../../Music-Reviews/index.html">Music Reviews</a></li>
+                     </ul>
+                  </li>
+                  <li><a href="http://sportswtbu.com/">Sports</a></li>
+                  <li><a href="http://wtbunews.org/">News</a></li>
+                  <li><a href="../../BUITM/index.html">BUITM</a></li>
+                  <li><a href="../../The_Beat/index.html">The Beat</a></li>
+                  <li><a href="../../Events/index.html">Events</a></li>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Interact <span class="caret"></span></a>
+                     <ul class="dropdown-menu">
+                        <li><a href="../../about-us/index.html">About Us</a></li>
+                        <li><a href="../../Contact-Us/index.html">Contact Us</a></li>
+                        <li><a href="../../Underwriting/index.html">Underwriting</a></li>
+                        <li><a href="../../Donate/index.html">Donate</a></li>
+                        <li><a href="../../Download-App/index.html">Download our App</a></li>
+                     </ul>
+                  </li>
+               </ul>
+               <form class="navbar-form navbar-left" role="search">
+                  <div class="form-group">
+                     <input type="text" class="form-control" placeholder="Search for ...">
+                  </div>
+                  <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+               </form>
+               <a href="http://wtbu.bu.edu:1800/listen.m3u"><button type="button" class="btn btn-danger navbar-btn"> Listen Live &nbsp; <i class="fa fa-play-circle fa-lg"></i></button></a>
+            </div>
+         </div>
+      </nav>
+      <header>
+         <center>
+            <p class="pad3"></p>
+            <div class="jumbotron">
+               <div id="frame-back">
+                  <div id="next-to">
+                     Now Playing:
+                  </div>
+                  <div id="frame">
+                     <marquee behavior="scroll" direction="left">
+                        <iframe id="spin-iframe" class="spin-songs"
+                           src="http://spinitron.com/public/newestsong.php?num=1&amp;station=wtbu&amp;styles=body,*{font-size: 15px;color: black !important;}&amp;stylesheet=http%3A%2F%2Fspinitron.bitbucket.org%2Fspin.css"
+                           width="100%" height="200" align="right"  scrolling="no"
+                           >
+                        </iframe>
+                     </marquee>
+                  </div>
+               </div>
+            </div>
+         </center>
+      </header>
+      <div id="wrapper" class="clear">
+         <style>
+            .breadcrumb a {
+            color: firebrick;
+            }
+         </style>
+         <ol class="breadcrumb">
+            <li><a href="../../Music-Reviews/index.html">Music Reviews</a></li>
+            <li class="active">The Life of Pablo - Kanye West Review</li>
+         </ol>
+         <a class="btn  btn-social btn-facebook" href="https://www.facebook.com/sharer/sharer.php?u=example.org" target="_blank">
+         <span class="fa fa-facebook"></span>  
+         Share on Facebook
+         </a>
+         <a class="btn  btn-social btn-twitter" href="http://twitter.com/intent/tweet?status=[TITLE]+[URL]" target="_blank">
+         <span class="fa fa-twitter"></span>  
+         Share on Twitter
+         </a>
+         <a class="btn  btn-social btn-google" href="https://plus.google.com/share?url=[URL]" target="_blank">
+         <span class="fa fa-google"></span>  
+         Share on Google+
+         </a>
+         <center>
+            <style>
+               .around{
+               margin: 50px;
+               }
+               .title{
+               color:darkred;
+               font-family: Orbitron;
+               letter-spacing: 2px;
+               font-weight: 600;
+               }
+               .text{
+               line-height: 250%;
+               text-indent: 50px;
+               font-family:serif;
+               font-size: 18px;
+               }
+               .artist{
+               color: dimgrey;
+               font-weight: 800;
+               }
+               .table{
+               border-style: double;
+               border-width: thick;
+               border-left: none;
+               border-right: none;
+               }
+            </style>
+            <h1 class="title"><span class="artist">The Life of Pablo</span> - Kanye West Review</h1>
+            <div class="container-fluid">
+               <div class="row">
+                  <img src="life-of-pab-header.jpg" class="img-rounded img-responsive" width="100%">
+               </div>
+            </div>
+         </center>
+         <p class="pad">
+            <font color="firebrick"><i class="fa fa-square"></i></font> <b> By:</b> Taylor Whiteman | | <small>February 19, 2016</small>
+         </p>
+         <div class="around">
+            <table class="table">
+               <tr>
+                  <td>
+                     <div class="text">
+                         <center><b><h2>T.L.O.P — Kanye’s Magnum Opus</h2></b></center>
+                        
+
+<p>“The Life of Pablo,” Kanye West’s seventh studio album, provides insight deep into the mind of its creator. Loud, confusing, and at times almost stressful - Kanye West uses “The Life of Pablo” to show his fans that being at the top isn’t all its cracked up to be. </p>
+
+<p>In the weeks leading up to the release of the album, West went though multiple title changes, track list revisions, and twitter rampages that both confused and riled up fans. By the time his sold out Madison Square Garden release party rolled around, the world was on its toes. Waiting for something that would top his previous studio album, “Yeezus,” when “The Life of Pablo” was released the world went flat on its heels. </p>
+
+<p>“The Life of Pablo” was not the album to once again reinvent the wheel, but was an album to show how the wheel should have been used this whole time. West has many muses for T.L.O.P. but one that helps explain the theme for the album is hidden right in the title. No, not Escobar, not Picasso, but Pablo the Apostle. West channels Pablo, which is Spanish for Paul, for the theme of the album. Paul the Apostle, a man who lived a life of decadence and sin, was touched by God and his life was changed from that moment forward. </p>
+
+<p>Since early 2013 a lot has changed for Kanye West. Now a married man and father of two, West raps about sin, temptation, and the higher power. He understands now that his family makes him more blessed than all the money he has earned or the accolades he has won. “The Life of Pablo” is West realizing he has been touched by God and sharing it with the world. He is not resting on laurels as some might think; West uses this album not to explore his music but to explore his faith. </p>
+
+<p>Opening strong with “Ultralight Beam,” West shares his newly strengthened religion and inner-power that comes with. With strong gospel undertones and a flawless cameo appearance from Chance the Rapper, “Ultralight Beam” sets the bar for the album - but may set it a little too high. As the album progresses into “Father Stretch My Hands”, the classic Kanye reappears with full auto tune and gritty lyrics. After “Pt. 2” of the track, T.L.O.P transitions into one of the most infamous songs on the album, “Famous.” This track feels as if it transports the listener to a time when West was still struggling with his faith and living a life a sin and decadence. </p>
+
+<p>By the time “Highlights” comes around, the listener begins to hear West begin to realize how his career has been nothing but highlights. West raps about his awards, his family and how blessed he truly has become. This theme follows into “I Love Kanye,” where West compares his persona both past and present. In this freestyle, West raps about how ‘Kanye’ has progressed throughout the albums from ‘sweet Kanye’ to the ‘always rude Kanye,’ which makes the listener think about which ‘Kanye’ this album represents.</p>
+
+<p>On the second half of the album, “Waves” comes in with a strong ethereal background and what sounds like West as a new man, standing strong beside his family and ready to take on the world. Later the album processes into “Real Friends,” where West talks about what its like on top with themes such as: family, trust issues, blackmail, and being too busy for the small things. It almost makes this ‘larger than life’ persona seem just simply human. The album from here gradually progresses into the coarse harsh “No More Parties in L.A.,” featuring Kendrick Lamar. West and Lamar talk about their lives of decadence and scandal always with the chorus of, “please baby, no more parties in L.A.” It sounds like West is trying to ask for forgiveness for his past and give up his party lifestyle. As the track progresses it becomes less about West’s life of decadence and more about family and how dearly he holds his family. As the album comes to a close, it’s certainly not without a bang. “Facts,” Kanye West’s big diss to fellow rapper Drake, makes the listener wonder if anything has changed for West. Rapping about how successful and reckless he is, the immediate thought is that old dogs can’t learn new tricks; but there might be more meaning to this track. </p>
+
+<p>The entirety of T.L.O.P. was a discussion of how West has progressed through his faith and has been building himself up with the help of a higher power. Yet the journey to a place of faith is not linear, but jagged with many ups and downs. “Facts” just shows West is human, and that he is still working on being the best Kanye that Kanye can be. </p>
+
+<p>“The Life of Pablo” is messy, confusing, and non-linear - just as it should be. Kanye West thought outside the box with this album, more than any other album before it, and it shows. “The Life of Pablo” seems to be a representation of West’s journey to find faith, and it’s represented in a meticulous and detailed fashion that only Kanye West could do.</p>
+
+                     </div>
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <center>
+         <div class="footer">
+            <p id="minor-pad"></p>
+            <p>
+               <a class="icon-pad" href="https://www.facebook.com/wtburadio"><i class="fa fa-facebook-square fa-4x"></i></a>
+               <a class="icon-pad" href="https://twitter.com/WTBU"><i class="fa fa-twitter-square fa-4x"></i></a>
+               <a class="icon-pad" href="https://www.instagram.com/wtbu/"><i class="fa fa-instagram fa-4x"></i></a>
+               <a class="icon-pad" href="http://wtburadio.tumblr.com/"><i class="fa fa-tumblr-square fa-4x"></i></a>
+            </p>
+            <p><small>&copy; 2016 WTBU</small></p>
+         </div>
+      </center>
+      <!--START SCRIPT -->  
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function () {
+         setInterval(function refreshDarkSky() {
+         
+         var iframe = document.getElementById('spin-iframe');
+         iframe.src = iframe.src;
+         
+         }, 20000);
+         });
+         
+         $(document).ready(function() {
+         $('.carousel').carousel({
+         interval: 4500
+         })
+         });
+      </script>
+      <!--END SCRIPT -->  
+   </body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title> WTBU Radio</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="WTBU website">
+      <meta name="author" content="Scarleth Estevez">
+      <link rel="icon" href="../../../drawing.png">
+      <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+      <link href='https://fonts.googleapis.com/css?family=Orbitron:400,700,900,500' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="../../bootstrap-social.css">
+   </head>
+   <body style="background-color:#f2f2f2">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>                        
+               </button>
+               <a class="navbar-brand" href="../../../index.html"><span class="spacing"><font color ="#bf2e26">WTBU RADIO</font></span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+               <ul class="nav navbar-nav">
+                  <li><a href="../../../index.html">Home</a></li>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="">Programming <span class="caret"></span></a>
+                     <ul class="dropdown-menu">
+                        <li><a href="../../../Programming_Schedule/index.html">Schedule</a></li>
+                        <li><a href="../../../Studio-Sessions/index.html">Studio Sessions</a></li>
+                        <li><a href="../../../Music-Reviews/index.html">Music Reviews</a></li>
+                     </ul>
+                  </li>
+                  <li><a href="http://sportswtbu.com/">Sports</a></li>
+                  <li><a href="http://wtbunews.org/">News</a></li>
+                  <li><a href="../../../BUITM/index.html">BUITM</a></li>
+                  <li><a href="../../../The_Beat/index.html">The Beat</a></li>
+                  <li><a href="../../../Events/index.html">Events</a></li>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Interact <span class="caret"></span></a>
+                     <ul class="dropdown-menu">
+                        <li><a href="../../../about-us/index.html">About Us</a></li>
+                        <li><a href="../../../Contact-Us/index.html">Contact Us</a></li>
+                        <li><a href="../../../Underwriting/index.html">Underwriting</a></li>
+                        <li><a href="../../../Donate/index.html">Donate</a></li>
+                        <li><a href="../../../Download-App/index.html">Download our App</a></li>
+                     </ul>
+                  </li>
+               </ul>
+               <form class="navbar-form navbar-left" role="search">
+                  <div class="form-group">
+                     <input type="text" class="form-control" placeholder="Search for ...">
+                  </div>
+                  <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+               </form>
+               <a href="http://wtbu.bu.edu:1800/listen.m3u"><button type="button" class="btn btn-danger navbar-btn"> Listen Live &nbsp; <i class="fa fa-play-circle fa-lg"></i></button></a>
+            </div>
+         </div>
+      </nav>
+      <header>
+         <center>
+            <p class="pad3"></p>
+            <div class="jumbotron">
+               <div id="frame-back">
+                  <div id="next-to">
+                     Now Playing:
+                  </div>
+                  <div id="frame">
+                     <marquee behavior="scroll" direction="left">
+                        <iframe id="spin-iframe" class="spin-songs"
+                           src="http://spinitron.com/public/newestsong.php?num=1&amp;station=wtbu&amp;styles=body,*{font-size: 15px;color: black !important;}&amp;stylesheet=http%3A%2F%2Fspinitron.bitbucket.org%2Fspin.css"
+                           width="100%" height="200" align="right"  scrolling="no"
+                           >
+                        </iframe>
+                     </marquee>
+                  </div>
+               </div>
+            </div>
+         </center>
+      </header>
+      <div id="wrapper" class="clear">
+         <style>
+            .breadcrumb a {
+            color: firebrick;
+            }
+         </style>
+         <ol class="breadcrumb">
+            <li><a href="../index.html">Music Reviews</a></li>
+            <li class="active">Mike Bono</li>
+         </ol>
+         <a class="btn  btn-social btn-facebook" href="https://www.facebook.com/sharer/sharer.php?u=example.org" target="_blank">
+         <span class="fa fa-facebook"></span>  
+         Share on Facebook
+         </a>
+         <a class="btn  btn-social btn-twitter" href="http://twitter.com/intent/tweet?status=[TITLE]+[URL]" target="_blank">
+         <span class="fa fa-twitter"></span>  
+         Share on Twitter
+         </a>
+         <a class="btn  btn-social btn-google" href="https://plus.google.com/share?url=[URL]" target="_blank">
+         <span class="fa fa-google"></span>  
+         Share on Google+
+         </a>
+         <center>
+            <style>
+               .around{
+               margin: 50px;
+               }
+               .title{
+               color:darkred;
+               font-family: Orbitron;
+               letter-spacing: 2px;
+               font-weight: 600;
+               }
+               .text{
+               line-height: 250%;
+               text-indent: 50px;
+               font-family:serif;
+               font-size: 18px;
+               }
+               .artist{
+               color: dimgrey;
+               font-weight: 800;
+               }
+               .table{
+               border-style: double;
+               border-width: thick;
+               border-left: none;
+               border-right: none;
+               }
+            </style>
+            <h1 class="title"><span class="artist">Mike Bono</span></h1>
+            <div class="container-fluid">
+               <div class="row">
+                 <img src="mike-bonoheader.png" class="img-rounded img-responsive" width="100%">
+               </div>
+            </div>
+         </center>
+         <p class="pad">
+            <font color="firebrick"><i class="fa fa-square"></i></font> <b>  Review by:</b> Kyra Louie | | <small>November 16, 2013 </small>
+         </p>
+         <div class="around">
+            <table class="table">
+               <tr>
+                  <td>
+                     <div class="text">
+                        <p >
+                           Red, white, and blue lights streaked across the stage ceiling as I entered the
+
+Regatta Bar in Harvard Square. The room was arranged in a typical jazz style: small
+
+four person tables stacked closely together and dim mood lighting. The show
+
+started at 7:48pm. The stage was lined with people of all ages, mostly musicians,
+
+with several college students. These kids were bright eyed and bushy tailed, eagerly
+
+waiting for the show to start.
+                        </p>
+                        <p>
+The Mike Bono Group just released their first album, entitled From Where
+
+You Are, last month. Mike, a recent graduate from the Berklee College of Music,
+
+brought together five other dazzlingly talented musicians to help him spread his
+
+music to the world. Together, Mike (guitar), Matthew (tenor saxophone), Christian
+
+(piano), Jared (bass), Naseem (cello) and Roberto (drums) brought to the stage a
+
+calming swagger that can only be described as the aura that jazz musicians naturally
+
+exude when in the spotlight.
+
+                        </p>
+                        <p>
+Throughout the entire show, they played with precision and confidence.
+
+The bond between these six men could be not only heard, but seen as well. The
+
+sextet played seven songs off of their new album, like “The Sound of Falling”, “Statue
+
+Chess”, “The First Dance”, and “Anthem”, to name a few. Mike also dedicated “I’ll Be
+
+Seeing You”, a popular jazz standard, to his mother and best friend. They closed with
+
+the first song that they ever played together as a group: “Closure”, another original.
+
+I honestly cannot get over Mike’s playing. It was the first time I have heard
+
+his original compositions before, and I thoroughly enjoyed myself. Moreover, he
+
+looked like he enjoyed playing for us. His articulation and phrasing have always
+
+been impressive, but this concert took my view of him to another level. I also want
+
+to note that Jared played a damn good bass, but that’s because I’m partial to bassists.
+
+From one tenor saxophone player to another, Matthew’s licks kept me on my toes.
+
+They were tasteful and rhythmically unique, and I would love to emulate his sound
+
+someday.
+
+
+                        </p>
+                        <p>
+After the show, Mike stood outside the venue to sell CDs and talk to whoever
+
+came out to the show. He talked to all the Berklee students that showed up and
+
+gave them a handshake or a hug. He gave advice and talked about his life at Berklee,
+
+and it looked like he had an impact on the students he talked to. I know he inspired
+
+me. It was a small showing—only 30-40 people—but I think that the smallness of it
+
+made the show feel so personal.
+
+These cats are the real deal. I highly recommend checking out their album, or
+
+dropping in to see a show, even if you don’t listen to jazz.
+                        </p>
+                     </div>
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <center>
+         <div class="footer">
+            <p id="minor-pad"></p>
+            <p>
+               <a class="icon-pad" href="https://www.facebook.com/wtburadio"><i class="fa fa-facebook-square fa-4x"></i></a>
+               <a class="icon-pad" href="https://twitter.com/WTBU"><i class="fa fa-twitter-square fa-4x"></i></a>
+               <a class="icon-pad" href="https://www.instagram.com/wtbu/"><i class="fa fa-instagram fa-4x"></i></a>
+               <a class="icon-pad" href="http://wtburadio.tumblr.com/"><i class="fa fa-tumblr-square fa-4x"></i></a>
+            </p>
+            <p><small>&copy; 2016 WTBU</small></p>
+         </div>
+      </center>
+      <!--START SCRIPT -->  
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function () {
+         setInterval(function refreshDarkSky() {
+         
+         var iframe = document.getElementById('spin-iframe');
+         iframe.src = iframe.src;
+         
+         }, 20000);
+         });
+         
+         $(document).ready(function() {
+         $('.carousel').carousel({
+         interval: 4500
+         })
+         });
+      </script>
+      <!--END SCRIPT -->  
+   </body>
+</html>

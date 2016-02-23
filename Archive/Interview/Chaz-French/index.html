@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title> WTBU Radio</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="WTBU website">
+      <meta name="author" content="Scarleth Estevez">
+      <link rel="icon" href="../../drawing.png">
+      <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+      <link href='https://fonts.googleapis.com/css?family=Orbitron:400,700,900,500' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../../Music-Reviews/bootstrap-social.css">
+   </head>
+   <body style="background-color:#f2f2f2">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>                        
+               </button>
+               <a class="navbar-brand" href="../../index.html"><span class="spacing"><font color ="#bf2e26">WTBU RADIO</font></span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+               <ul class="nav navbar-nav">
+                  <li><a href="../../index.html">Home</a></li>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="">Programming <span class="caret"></span></a>
+                     <ul class="dropdown-menu">
+                        <li><a href="../../Programming_Schedule/index.html">Schedule</a></li>
+                        <li><a href="../../Studio-Sessions/index.html">Studio Sessions</a></li>
+                        <li><a href="../../Music-Reviews/index.html">Music Reviews</a></li>
+                         <li><a href="../../Interview/index.html">Interviews</a></li>
+                     </ul>
+                  </li>
+                  <li><a href="http://sportswtbu.com/">Sports</a></li>
+                  <li><a href="http://wtbunews.org/">News</a></li>
+                  <li><a href="../../BUITM/index.html">BUITM</a></li>
+                   <li><a href="../../The_Beat/index.html">The Beat</a></li>
+                  <li><a href="../../Events/index.html">Events</a></li>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Interact <span class="caret"></span></a>
+                     <ul class="dropdown-menu">
+                        <li class="active"><a href="../about-us/index.html">About Us</a></li>
+                        <li ><a href="../../Contact-Us/index.html">Contact Us</a></li>
+                        <li><a href="../../Underwriting/index.html">Underwriting</a></li>
+                        <li><a href="../../Donate/index.html">Donate</a></li>
+                        <li><a href="../../Download-App/index.html">Download our App</a></li>
+                     </ul>
+                  </li>
+               </ul>
+               <form class="navbar-form navbar-left" role="search">
+                  <div class="form-group">
+                     <input type="text" class="form-control" placeholder="Search for ...">
+                  </div>
+                  <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+               </form>
+               <ul class="nav navbar-nav navbar-left">
+                  <div class="btn-group" role="group" aria-label="...">
+                 <a  href="listen.m3u" type="button" class="btn btn-danger navbar-btn"> Listen Live</a>
+                
+               <button type="button" class="btn btn-danger navbar-btn play"><i class="fa fa-play-circle fa-lg"></i></button>
+                 <button type="button" class="btn btn-danger navbar-btn pause"><i class="fa fa-pause-circle fa-lg"></i></button>
+
+ 
+                    </div>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <header>
+         <center>
+            <p class="pad3"></p>
+            <div class="jumbotron">
+               <div id="frame-back">
+                  <div id="next-to">
+                     Now Playing:
+                  </div>
+                  <div id="frame">
+                     <marquee behavior="scroll" direction="left">
+                        <iframe id="spin-iframe" class="spin-songs"
+                           src="http://spinitron.com/public/newestsong.php?num=1&amp;station=wtbu&amp;styles=body,*{font-size: 15px;color: black !important;}&amp;stylesheet=http%3A%2F%2Fspinitron.bitbucket.org%2Fspin.css"
+                           width="100%" height="200" align="right"  scrolling="no"
+                           >
+                        </iframe>
+                     </marquee>
+                  </div>
+               </div>
+            </div>
+         </center>
+      </header>
+      <div id="wrapper" class="clear">
+         <style>
+            .breadcrumb a {
+            color: firebrick;
+            }
+         </style>
+         <ol class="breadcrumb">
+            <li><a href="../../Interview/index.html">Interview</a></li>
+            <li class="active">Interview with Chaz French</li>
+         </ol>
+         <a class="btn  btn-social btn-facebook" href="https://www.facebook.com/sharer/sharer.php?u=example.org" target="_blank">
+         <span class="fa fa-facebook"></span>  
+         Share on Facebook
+         </a>
+         <a class="btn  btn-social btn-twitter" href="http://twitter.com/intent/tweet?status=[TITLE]+[URL]" target="_blank">
+         <span class="fa fa-twitter"></span>  
+         Share on Twitter
+         </a>
+         <a class="btn  btn-social btn-google" href="https://plus.google.com/share?url=[URL]" target="_blank">
+         <span class="fa fa-google"></span>  
+         Share on Google+
+         </a>
+         <center>
+            <style>
+               .around{
+               margin: 50px;
+               }
+               .title{
+               color:darkred;
+               font-family: Orbitron;
+               letter-spacing: 2px;
+               font-weight: 600;
+               }
+               .text{
+               line-height: 250%;
+
+               font-family:serif;
+               font-size: 18px;
+               }
+               .artist{
+               color: dimgrey;
+               font-weight: 800;
+               }
+               .table{
+               border-style: double;
+               border-width: thick;
+               border-left: none;
+               border-right: none;
+               }
+            </style>
+             <h1 class="title"><span class="artist">Interview with Chaz French</span></h1>
+            <div class="container-fluid">
+               <div class="row">
+                 <div class="embed-responsive embed-responsive-16by9">
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/03Xe7V21pQU" frameborder="0" allowfullscreen></iframe>
+                    </div>
+               </div>
+            </div>
+         </center>
+         <p class="pad">
+            <font color="firebrick"><i class="fa fa-square"></i></font> <b> By:</b> Derrick Monteiro <em>Music Director</em>| | <small>02/19/2016</small>
+         </p>
+         <div class="around">
+            <table class="table">
+               <tr>
+                  <td>
+                     <div class="text">
+                        <blockquote>
+                            <center>
+                        <p>Chaz French is an upcoming and notable rapper born in Washington D.C. and a father of two, who uses his life experiences and struggles to shape his music. He has two projects out. The first, a mixtape called “Happy Belated,” was released on October 1st, 2014. The second called “These Things Take Time,” dropped December 11th, 2015. Chaz opened up for rapper Pell on February 6th at Middle East. His stage presence was phenomenal and he brought his raps to life in front of the audience. By the end of his set, Chaz ignited the crowd like no other act preceding him; it can be argued that the crowd was never the same after he left the stage. He lit a spark within the crowd that roared louder than fireworks on the Fourth of July.</p>
+                                </center>
+                            </blockquote>
+                         
+<p><b>How would you say the DMV* and Texas has shaped you not only as a musician but also as a person?</b></p>
+
+<p>I went through different situations then. I was homeless in Texas, you know what I’m saying? Then I was living with my mom in D.C., but it was still like the same thing because nobody was supporting what I was doing. I grew up in D.C. from first grade to eighth grade so you know it’s always going to be a part of me. That’s where I was born and I still live there now. But Texas, I was there for critical years, ninth grade to when I was twenty. I went through a lot there, but they both had the same effect on me.</p>
+
+<p>*The DMV stands for D.C., Maryland, and Virginia</p>
+
+<p><b>What would you say other than the DMV and Texas is your biggest influence in your music?</b></p>
+
+<p>My kids. There’s no explanation to that.</p>
+
+<p><b>Before your kids, what was your inspiration?</b></p>
+
+<p>I was inspired by everything I couldn’t have. Shoes I couldn’t buy, when I couldn’t get food, not being able to take care of my mom or myself. It was everything I didn’t have, everything I wanted, and everything I knew I was going to get.</p>
+
+<p><b>You released both of your projects, “Happy Belated” and “These Things Take Time” essentially a year apart. What would you say your growth was between the two projects?</b></p>
+
+<p>Learning patience and understanding like it’s a business and the politics of it. You just got to be really patient. Everything’s not going to happen overnight. Everything’s not going to happen when you want it. You know what I’m saying? I had to learn self-control, I had to learn how to compromise, I had to learn how to be more understanding, had to learn how to structure songs even. Not just rush something just because it’s good. It was really patience.</p>
+
+<p><b>What would you say is your favorite song on both projects? -</b></p>
+
+<p>Aw s—t.</p>
+
+<p><b>- As in which songs from both projects would you have a new fan listen to?</b></p>
+
+<p>For “Happy Belated”it might be “Primavera.” On “These Things Take Time,” “Mind to It,” but if I had to I don’t know.</p>
+
+<p><b>I understand it is hard because each song is essentially a piece of you</b>.</p>
+
+<p>Yeah that’s tough. That’s tough.</p>
+
+<p><b>What made you decide that rapping is what you wanted to do with your life? I feel like this is a field where a lot of people don’t make it.</b></p>
+
+<p>I mean it’s an oversaturated field. I mean, music has always been a part of me. I grew up playing the drums, so I was always musically inclined. I think I did a talent show in the ninth grade one time and the reception I got was great, so I was like, “this is tight”. But then when I actually started studying artists and actually started paying attention to music for what it is, I was like, I want to be able to help people out through my art. I want to inspire people. I want people to look at me and be like damn, he came from this, he came from that and he was able to get there.</p>
+
+<p><b>You’re coming out in a very interesting time in music. There are new rappers coming out every single day. What differentiates you from them?</b></p>
+
+<p>I don’t know. I don’t know these guys. I guess it’s just the honesty in my music. A lot of people put their heart in their music, but I know how I go about music. I know I go about it in a way no one else does. Everybody should feel like that. I go about a way that puts my songs together in a different way. I’m not saying I’m different, I’m just saying that I’m genuinely really passionate about it. I’m not going to settle for less, I’m not going to settle for what’s popping now, I’m not gonna make a trendy record for notoriety. I’ve really lived this s—t. Everything I put in my music is me day to day all day. Nothing is fabricated. You hear a lot of that in current music and you can’t knock it because that is what sells.</p>
+
+<p><b>Interestingly enough that’s why I came to this show. I listen to lyrics. If you catch my ear and I’m like yeah that’s dope and I can relate to it, I’ll support it. I feel like you do that and that’s what drew me here. I respect your craft and that is what I say differentiates you from upcoming artists.</b></p>
+
+<p>Thank you man, I appreciate that.</p>
+
+<p><b>People will release anything just to release it. If you have a catchy beat people will listen to it.</b></p>
+
+<p>What’s worse is that people accept it. When all you hear is that stuff, that’s all you’re going to want to listen to. That’s all they are feeding us. That’s all they’re putting on the radio.</p>
+
+<p><b>What I admire about you is that you’re raw and stick to your roots. You don’t fabricate anything and this is who you are. You tell your story.</b></p>
+
+<p>All day.</p>
+
+<p><b>Other than rapping, writing music, and spending time with your family what do you like to do in your spare time?</b></p>
+
+<p>Bowl. I love to bowl. I am a bowler. I’m a homebody though, for the most part. It’s weird. When I’m not on the road or when I’m not in the studio I’m either bowling, or in the house, or me and my friends sometimes we just like to walk around the neighborhood or walk around D.C. Gold Link and I just walk around Georgetown sometimes because we don’t get to do that every day. We’re not home every day. I just like to see my city. I like to see the fans and where I’m from. I used to be so much more turned up. I used to be a turnt up individual, wildin’ out all the time. For some reason it’s just starting to happen. I like to shop too. Who doesn’t like to shop? I love new pieces. Even if I know I’m not going to buy it. I just like looking at clothes. Lately I’ve been getting into like museums and s—t. Just to open my mind to old s—t and new s—t because I don’t read much. I feel like I need to catch up on my reading too.</p>
+
+<p><b>In music, especially hip-hop, it is easy to feel like you’re not getting the attention you deserve or any attention whatsoever. In those moments what drives you to keep doing it?</b></p>
+
+<p>Somebody has to hear this. Somebody has to hear what I’m saying. My message is, I feel, powerful enough to where it needs to be heard. There’s somebody out there who was homeless who wants to be a rapper, or wants to be a model, or wants to be something that they dreamed of. I make music for the dreamers. I make music for the people who have it and want more, or who don’t have it all and just want a piece of it. I think about the people who haven’t heard my music. I think about the n—a who’s probably fifteen or sixteen going through the s—t I was going through at their age. I think about my kids. I don’t want them to grow up and be like “dad was a loser” or “my dad tried.” No, I want them to grow up and be inspired by everything I’ve done. I want to leave a mark. I want to be one of the greats. I don’t have to change the world; I just want to affect someone if I possibly can. I just think about where I was not long ago and know that someone else is going through that same s—t.</p>
+
+<p><b>Have you had your ‘made it’ moment yet? If so, what was it?</b></p>
+
+<p>I think being at Rick Rubin’s house. I say that all the time. Being at Rick Rubin’s house. I haven’t made it yet. Definitely. But meeting Rick Rubin as an artist was dope. I didn’t make it, but someone is paying attention.</p>
+
+<p><b>Is there anything you would have done differently in your career if you had the chance?</b></p>
+
+<p>Nope. I just feel like everything is supposed to happen the way it is. Everybody’s story is different, everybody’s come up is different, and everybody’s claim to however they picture themselves is different. Some people have it overnight. S—t I might not get it until I’m thirty. You never know.</p>
+
+<p><b>You are incredibly humble. I feel like with hip-hop specifically it is really easy to let everything get to your head. </b></p>
+
+<p>Oh definitely. Everybody has his or her moments. </p>
+
+<p><b>How do you stay humble? How do you stay grounded?</b></p>
+
+<p>Because as quick as you can get it, you can lose it even faster. I wouldn’t want it to be because I wasn’t humble. Sometimes you got to know your worth. That don’t mean that I don’t wake up every day and look at the mirror and say “I’m the s—t” because that’s just how I feel at that moment; but then sometimes I look in the mirror and say “I ain’t s—t.” I’m human. That’s just how it is.</p>
+
+<p><b>Other than the fact that you bowl and go to museums, what is something fans wouldn’t know about Chaz French?</b></p>
+
+<p>I eat sunflower seeds every day.</p>
+
+<p><b>Why?</b></p>
+
+<p>It’s a habit. I used to smoke cigarettes and I quit. I just needed something to do and I just found myself eating sunflower seeds all the time. If you eat sunflower seeds, this may sound stupid, that s—t makes you think. Like sometimes I just zone out while I’m eating sunflower seeds. I just be like “oh s—t.” It’s weird. If you ever catch someone eating sunflower seeds they will have a moment when they zone out. They’re just thinking. I’m telling you. My mom gets me an entire box every time she goes to the store.</p>
+
+<p><b>How would you say being a father has changed your music?</b></p>
+
+<p>Everything. Kids are so informative and they don’t even know it. I learn so much from my kids. It don’t make sense. I’m obligated to make sure they eat, I’m obligated to make sure they don’t go through nothing I went through, I’m obligated to make sure they have the right phones, they go to the right school, they have the right friends, all of that. I’m obligated. That’s a job. Having kids is a job and it’s tough, but it’s the most loving, fun experience ever. A kid will teach you the definition of unconditional love. Everything I do now I have to keep them in mind. The smallest s—t. I gotta watch my temper now. I gotta watch what I say sometimes. I gotta watch a lot.</p>
+
+<p><b>Other than hip-hop what is your favorite genre? Who is your current favorite artist, present and past?</b></p>
+
+<p>I love gospel music, but I feel like right now I think Anderson .Paak has the best project out as of 2016. I love his project. I’ve been listening to a lot of Earl Sweatshirt randomly and I listen to Gold Link a lot of course, that’s my best friend. Amy Winehouse, but I love gospel music. I just love music in general. I like gospel music because it’s so redundant and you can hear the same song over, over, and over and get the same feeling every time you hear it. You don’t get tired of it. That’s why I want to make like gospel music in a hip-hop form so that every time they hear it it’s the same thing. It doesn’t get old. It’s timeless.</p>
+
+<p><b>What artist right now would you want to collaborate with?</b></p>
+
+<p>Right now?</p>
+
+<p><b>In this moment, right now, any artist on the planet. Let’s say one for past and one for present.</b></p>
+
+<p>Kid Cudi. That’s my favorite artist. Past? This is so tough.</p>
+
+<p><b>You can do top five if you’d like.</b></p>
+
+<p>Kid Cudi, Marvin Gaye, Joanna Newsom – I don’t know if y’all have ever heard of Joanna Newsom. Have you ever heard the soundtrack from the movie? Uh… It’s a scary movie too. They’re in a house the whole time and the guys have these masks on. And at the end of the movie they kill the whole family. Joanna Newsom. I don’t want to freak anybody out. What’s the name of that movie? – Joanna Newsom, Kirk Franklin, and right now Kanye. I have to have a song with Kanye. There are so many other people, but they are who come to mind right now. Amy Winehouse, but I wish that could happen. </p>
+
+<p><b>What is one thing you want all the people who are going to read this to know about you?</b></p>
+
+<p>I’m never going to stop making music.</p>
+
+<p>Check Chaz’s music out on iTunes, Spotify, YouTube, Soundcloud, Apple Music, Tidal, Google Play, and all other major streaming services.</p>
+
+                     </div>
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <center>
+         <div class="footer">
+            <p id="minor-pad"></p>
+            <p>
+               <a class="icon-pad" href="https://www.facebook.com/wtburadio"><i class="fa fa-facebook-square fa-4x"></i></a>
+               <a class="icon-pad" href="https://twitter.com/WTBU"><i class="fa fa-twitter-square fa-4x"></i></a>
+               <a class="icon-pad" href="https://www.instagram.com/wtbu/"><i class="fa fa-instagram fa-4x"></i></a>
+               <a class="icon-pad" href="http://wtburadio.tumblr.com/"><i class="fa fa-tumblr-square fa-4x"></i></a>
+            </p>
+            <p><small>&copy; 2016 WTBU</small></p>
+         </div>
+      </center>
+      <!--START SCRIPT -->  
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <script src="../../script2.js">
+      </script>
+      <!--END SCRIPT -->  
+   </body>
+</html>

@@ -1,0 +1,688 @@
+/*============================================================
+the shedule
+take care here. the widths and heights in % should be left
+alone. the grid is layed out by percents of the size of the
+envlosling #bigscheddiv, height of which you can override.
+#middle's class is "wide" for the program schedule to make
+it as wide as the browser viewport can take
+============================================================ */
+#catselector a {
+	/* links in the show category selector above the schedule */
+    font-family: monospace;
+    text-decoration-color: firebrick;
+    font-size: 20px;
+	}
+#catselector a.hilite {
+	/* javascript appends 'hilite' to a link's classname when the user clicks it */
+	color: black;
+	background: #fc8;
+	}
+#bigscheddiv {
+	/* div enclosing the schedule */
+	position: relative;
+	width: 100%;
+	min-width: 40em; /* min-width doesn't work in MS-IE6. sorry */
+	height: 80em;
+	/* the block that defines the size of the schedule therefore also the elements within */
+	}
+div.schedshow,
+div.schedbg0,
+div.schedbg1,
+div.schedday {
+	/* boxes in the schedule are absolutely positioned */
+	/* block elements within the schedule */
+	position: absolute;
+	border: none;
+	}
+div.schedshow {
+	/*  box for one show in the schedule. width, top and left property values 
+		are set by the script as it generates the schedule */
+	background-color: lightgray;
+	border: 3px solid dimgray;
+	text-align: center;
+	line-height: 2;
+	overflow: hidden;
+	}
+div.schedshow.hilite {
+	/* 'hilite' is dynamically appended to applicable blocks' classname  
+		when the user selects a show category */
+	background-color: burlywood;
+	}
+div.schedshow p {
+	/* para within a show box */
+	font-size: 0.85em;
+	padding: 0.2em 0.1em;
+	margin: 0;
+	word-wrap: break-word;
+	}
+div.schedshow a {
+	/* the first link within a show box */
+	text-decoration: none;
+	color: #bf2e26;
+	font-weight:600;
+	outline: none;
+	}
+div.schedshow span a {
+	/* the other link within a show box */
+	background: transparent;
+	color: black;
+    font-family: monospace;
+    font-size: 15px;
+	}
+div.schedshow a:hover {
+	/* links in the show boxes */
+	background-color: lightgrey;
+	}
+div.schedday {
+	/* days of the week at the top of the grid */
+	width: 13%;
+	padding-top: 0.4em;
+	text-align: center;
+    font-family: monospace;
+    color: firebrick;
+    font-size: 20px;
+	}
+div.schedbg0{
+    background-color:slategray;
+	border: 2px solid black;
+	left: 3%;
+	width: 94%;
+}
+div.schedbg1 {
+	/* short wide background boxes for hours of the day */
+	/* allows different styles for alternating rows. not currently used by
+	   default but it's available. property 'top' is set by the script */
+	background-color: whitesmoke;
+	border: 2px solid black;
+	left: 3%;
+	width: 94%;
+	}
+div.schedbg0 p,
+div.schedbg1 p {
+	/* hour of the day labels  */
+	position: absolute;
+	top: -0.7em;
+	font-size: 0.85em;
+	background: transparent;
+	padding: 10;
+	}
+p.hourl {
+	/* hour labels on the left */
+	text-align: right;
+	right: 100.5%;
+    font-size: 10px;
+	}
+p.hourr {
+	/* hour labels on the right */
+	text-align: left;
+	left: 100.5%;
+    visibility: hidden;
+    
+	}
+
+/* list schedule */
+
+#ScheduleColumns td.scheduleColumn.left {
+	padding-right: 1em;
+	}
+#ScheduleColumns td.scheduleColumn.right {
+	padding-left: 1em;
+	}
+td.scheduleColumn {
+	max-width: 50%;
+	}
+table.schedule {
+	margin: 1em 0 0 0;
+	border-collapse: collapse;
+	}
+table.schedule td {
+	padding: 0.1em 0;
+	border-top: 1px solid #ddd3cc;
+	}
+table.schedule td.weekday {
+	font-size: 100%;
+	font-weight: bold;
+	padding: 0.2em 0.5em 0.2em 0;
+	}
+table.schedule td.time {
+	padding: 0.1em 0.3em 0.1em 0;
+	}
+table.schedule td.descr:hover {
+	cursor: pointer;
+	}
+table.schedule td.x {
+	padding: 0 0.5em;
+	border-top: none;
+	}
+table.schedule div.showdescr {
+	display: none;
+	}
+table.schedule div.showdescr.read {
+	display: block;
+	position: absolute;
+	z-index: 10;
+	width: 25em;;
+	}
+table.schedule div.showdescr p {
+	border: 5px solid;
+	border-color: #d3d3d3 #aaa #a4a4a4 #ddd;
+	padding: 0.6em 1em;
+	background: white;
+	}
+table.schedule td.schedshow.hilite {
+	/* 'hilite' is dynamically appended to applicable blocks' classname  
+		when the user selects a show category */
+	background: #fc8;
+	}
+table.schedule td.schedshow a {
+	text-decoration: none;
+	color: #bf2e26;
+    font-weight: 300;
+    
+	}
+table.schedule td.schedshow a:hover {
+	color: #f00;
+	}
+table.schedule span.showcat {
+	display: none;
+	}
+
+#InfoBox {
+	display: none;
+	position: absolute;
+	z-index: 110;
+	width: 345px;
+	color: #000;
+	text-align: left;
+	font-size: 12px;
+	top: 0;
+	left: 0;
+	}
+#InfoBox.s {
+	width: 245px;
+	}
+#InfoBox-top {
+	height: 29px;
+	overflow: hidden;
+	background: transparent url(/img/bg-top.png) no-repeat;
+	}
+#InfoBox-mid {
+	zoom: 1;
+	background-image: url(/img/bg-mid.png);
+	}
+#InfoBox-mid .infoBoxContent {
+	margin: 0 16px;
+	background: #fff;
+	}
+#InfoBox-bot {
+	height: 31px;
+	overflow: hidden;
+	background: transparent url(/img/bg-bot.png) no-repeat;
+	}
+#InfoBox.s #InfoBox-top {
+	background: transparent url(/img/bg-top-s.png) no-repeat;
+	}
+#InfoBox.s #InfoBox-mid {
+	background-image: url(/img/bg-mid-s.png);
+	}
+#InfoBox.s #InfoBox-bot {
+	background: transparent url(/img/bg-bot-s.png) no-repeat;
+	}
+
+#InfoBox-arrow {
+	display: block;
+	position: absolute;
+	top: 120px;
+	background: transparent url(/img/arrows.png) no-repeat;
+	width: 95px;
+	height: 204px;
+	}
+#InfoBox .ne {
+	clip: rect(136px 95px 204px 47px);
+	left: 282px;
+	}
+#InfoBox .nw {
+	clip: rect(136px 48px 204px 0);
+	left: -32px;
+	}
+#InfoBox .nse {
+	clip: rect(0 95px 68px 47px);
+	left: 282px;
+	}
+#InfoBox .nsw {
+	clip: rect(0 48px 68px 0);
+	left: -32px;
+	}
+#InfoBox .se {
+	clip: rect(68px 95px 136px 47px);
+	left: 282px;
+	}
+#InfoBox .sw {
+	clip: rect(68px 48px 136px 0);
+	left: -32px;
+	}
+#InfoBox.s .ne,
+#InfoBox.s .nse,
+#InfoBox.s .se {
+	left: 182px;
+	}
+
+#InfoBox-mid .infoBoxShow {
+	padding-bottom: 0.5em;
+	min-height: 4em;
+	}
+#InfoBox-mid .infoBoxShow h1 {
+	position: relative;
+	margin: 0 -1px;
+	top: -12px;
+	font-size: 1.08em;
+	font-weight: bold;
+	padding: 0 1em 0.5em;
+	/*background: #c0c0c0;*/
+	background: #600;
+	color: white;
+	}
+#InfoBox-mid .infoBoxShow p {
+	margin-top: 0.6em;
+	padding: 0 1em 0;
+	}
+#InfoBox-mid .infoBoxShow p.first {
+	margin-top: 0;
+	}
+#InfoBox-mid p.imgs {
+	float: left;
+	margin: 0;
+	padding-left: 0;
+	}
+#InfoBox-mid p.imgs img {
+	border: 1px solid #ccc;
+	margin-left: 0.3em;
+	}
+#InfoBox-mid p.clear {
+	clear: both;
+	line-height: 0;
+	margin: 0;
+	}
+
+div.fb-like {
+	margin: 0.2em 0;
+	}
+
+table.pltab {
+	border-collapse: collapse;
+	}
+tr.od td,
+div.f2row.od {
+	background-color: #F2F5F5;
+	}
+table.noart tr.od td {
+	background-color: transparent;
+	}
+div.f2row {
+	padding: 0.2em 0.3em 0.4em;
+	min-height: 32px;
+	}
+div.buy div.f2row {
+	min-height: 34px;
+	}
+div.withart,
+table.withart {
+	margin-bottom: 75px;
+	}
+div.withart div.f2row {
+	min-height: 42px;
+	}
+html.ie6 div.buy div.f2row {
+	height: 10px;
+	}
+html.ie6 div.withart div.f2row {
+	height: 42px;
+	}
+
+html.ie6 div.f2row {
+	height: 1%;
+	}
+
+div.plblock .tweet {
+	display: inline-block;
+	float: right;
+	padding-top: 8px;
+	}
+.plrow .tweet img {
+	vertical-align: -3px;
+	}
+
+a.get-comments {
+	background:url(/img/sb2.png) no-repeat;
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	float: right;
+	}
+a.get-comments:hover {
+	background-position: 0 -32px;
+	}
+#simplemodal-overlay {
+	background-color: #000;
+	}
+#simplemodal-container {
+	background-color: #fff;
+	border: 3px solid #000;
+	padding: 100px;
+	}
+#simplemodal-container h1 {
+	margin-top: 0.5em;
+	color: #666;
+	background: transparent;
+	}
+#simplemodal-container h1 .b {
+	color: black;
+	}
+#simplemodal-container h1 .i {
+	font-style: italic;
+	}
+#simplemodal-container a.modalCloseImg {
+	background:url(/img/w.png) no-repeat;
+	display:inline;
+	width:25px;
+	height:29px;
+	position:absolute;
+	top:-15px;
+	right:-18px;
+	z-index:3200;
+	cursor:pointer;
+}
+#comments-body .comment {
+	border-bottom: none;
+	}
+#comments-body .note-info {
+	font-style: italic;
+	color: #666;
+	margin: 1em 0 0 0;
+	}
+#comments-body .note {
+	padding: 3px 6px;
+	font-size: 109%;
+	margin: 0 1px;
+	}
+#comments-body hr {
+	display: none;
+	}
+
+table.pltab td.dynit,
+div.f2row div.dynit {
+	padding: 0.3em 0.3em 0.3em 0.4em;
+	}
+div.f2row div.dynit {
+	float: right;
+	}
+table.pltab td.dynit a,
+div.f2row div.dynit a {
+	background-image: url("/img/dynit.png");
+	background-repeat: no-repeat;
+	display: block;
+	width: 28px;
+	height: 28px;
+	}
+table.pltab td.dynit a:hover,
+div.f2row div.dynit a:hover {
+	background-image: url("/img/dynit-h.png");
+	background-color: transparent;
+	}
+
+div.art {
+	position: relative;
+	min-height: 37px;
+	padding: 0.3em;
+	margin: 0 0.4em 0 0;
+	}
+#thisart {
+	z-index: 20;
+	}
+div.f2row div.art {
+	float: left;
+	}
+div.art img,
+div.art div.noart {
+	width: 35px;
+	height: auto;
+	border: 1px solid #ddd;
+	}
+div.art div.noart {
+	position: relative;
+	height: 35px;
+	}
+
+#bigart {
+	z-index: 10;
+	border: 4px solid #ddd;
+	margin: 0;
+	width: auto;
+	}
+#artplay {
+	z-index: 15;
+	border: none;
+	margin: 8px;
+	width: auto;
+	}
+#thisart img.artleft,
+img.artleft {
+	position: absolute;
+	top: 0;
+	right: 0;
+	}
+#thisart img.artright,
+img.artright {
+	position: absolute;
+	top: 0;
+	left: 0;
+	}
+#thisart img.artfloat,
+img.artfloat {
+	position: relative;
+	float: left;
+	top: auto;
+	}
+#bigart.artfloat {
+	border-width: 6px;
+	}
+#artplay.artfloat {
+	margin-left: -34px;
+	}
+
+div.f2row div.nfo {
+	padding: 0.25em 0 0.5em;
+	min-height: 30px;
+	}
+div.f2row div.nfo p.st {
+	font-size: 83%;
+	color: #666;
+	}
+div.f2row div.nfo span.aw {
+	font-weight: bold;
+	}
+div.f2row div.nfo span.sn {
+	}
+div.f2row div.nfo span.sn_cp {
+	}
+div.f2row div.nfo span.dn {
+	font-style: italic;
+	}
+div.f2row div.nfo span.df {
+	}
+div.f2row div.nfo span.de {
+	font-size: 83%;
+	text-transform: uppercase;
+	}
+div.f2row div.nfo span.ld {
+	}
+div.f2row div.nfo span.fg {
+	font-size: 83%;
+	text-transform: uppercase;
+	font-weight: bold;
+	}
+div.f2row div.nfo span.so {
+	}
+
+hr.clearer {
+	clear: both;
+	visibility: hidden;
+	}
+
+#chatpanel {
+	float: right;
+	clear: right;
+	border: 1px solid #600;
+	min-width: 16.5em;
+	max-width: 20em;
+	font-size: 100%;
+	font-family: Calibri, Tahoma, Verdana, "DejaVu Sans", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", "Arial Unicode MS", Arial, sans-serif;
+	line-height: 1.2em;
+	color: black;
+	background-color: white;
+	position: relative;
+	z-index: 25;
+	}
+
+html.lte7 #chatpanel {
+	width: 18em;
+	}
+#all_msgs.all_msgs {
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	max-height: 120em;
+	overflow-x: hidden;
+	overflow-y: auto;
+	}
+#chatpanel div {
+	border-top: 1px solid #ccc;
+	padding: 0.25em 0.5em;
+	background-color: transparent;
+	}
+#chatpanel p,
+#chatpanel div {
+	word-wrap: break-word;
+	}
+#chatpanel div:first-child {
+	border-top: none;
+	}
+#chatpanel div.head {
+	background-color: #e7e7e7;
+	font-weight: bold;
+	}
+#chatpanel div.nfo {
+	}
+#chatpanel div.od {
+	background-color: #f2f5f5;
+	}
+#chatpanel p.err {
+	color: #900;
+	}
+#chatpanel div.form textarea {
+	width: 97%;
+	height: 2.4em;
+	margin-top: 3px;
+	border: 1px solid #600;
+	font: inherit;
+	line-height: 1.15em;
+	}
+#chatpanel div.form input {
+	font-size: 85%;
+	margin-top: 3px;
+	}
+#chatpanel input.text {
+	border: 1px solid #600;
+	}
+#chatpanel #logonname {
+	width: 14em;
+	}
+#chatpanel span.msg_name {
+	font-style: italic;
+	}
+#chatpanel span.msg_time {
+	color: #666;
+	}
+#chatpanel span.chaterror {
+	color: #633;
+	}
+#chat_logon {
+	border: 1px solid #600;
+	padding: 0.5em;
+	}
+#chat table {
+	border-spacing: 0;
+	}
+#chat_logon form {
+	display: block;
+	float: left;
+	margin: 0.4em 1em 0.6em 0;
+	}
+html.ie6 #cl_left {
+	width: 340px;
+	}
+#chat_logon p {
+	color: #666;
+	font-family: Calibri, Tahoma, Verdana, "DejaVu Sans", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", "Arial Unicode MS", Arial, sans-serif;
+	font-size: 110%;
+	line-height: 1.2em;
+	}
+#chat_logon p.lead {
+	margin-top: 0.5em;
+	}
+#chat_logon p.err {
+	color: #900;
+	font-weight: bold;
+	}
+
+div.document,
+div.document * {
+	font-family: Arial, "Helvetica Neue", Helvetica, "DejaVu Sans", sans-serif;
+	background-color: transparent;
+	color: #444;
+	}
+div.document {
+	font-size: 116.7%;
+	line-height: 1.3em;
+	}
+div.document h1 {
+	color: #600;
+	font-weight: normal;
+	font-size: 200%;
+	margin: 0.25em 0 0;
+	}
+div.document h2 {
+	color: #600;
+	font-weight: normal;
+	font-size: 133%;
+	margin: 1em 0 0;
+	}
+div.document h3 {
+	color: #600;
+	font-weight: bold;
+	font-size: 112%;
+	margin: 1em 0 0;
+	}
+div.document p {
+	margin: 1em 0 0;
+	}
+div.document ul {
+	margin: 0 -2em 0 1em;
+	}
+div.document ul li {
+	text-indent: -1em;
+	margin: 0.4em 0 0 1em;
+	}
+
+#chat-start {
+	font-size: 125%;
+	font-weight: bold;
+	padding: 4px 0 12px;
+	}
+#chat-start img {
+	margin-bottom: -6px;
+	}
+
+.mob-home {
+	display: none;
+}
