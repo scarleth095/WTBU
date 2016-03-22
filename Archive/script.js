@@ -1,4 +1,5 @@
 $(document).ready(function () {
+        $("#sports").hide();
          setInterval(function refreshDarkSky() {
          
          var iframe = document.getElementById('spin-iframe');
@@ -26,4 +27,16 @@ $(document).ready(function () {
         $('.pause').click(function() {
             audioElement.pause();
         });
+    
+
+    var day = new Date();
+    if (day.getDay() ==1 ) {
+        if (18< day.getHours()){
+            if (day.getHours() < 20  ){
+             $("#frame").hide();
+             $("#sports").show();
+            }
+        }
+    } 
+
     });

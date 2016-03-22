@@ -38,6 +38,16 @@
     margin-right: 10px;
     margin-top: -14px;
 }
+#sports{
+    float: right;
+    margin-top: 2px;
+    display: inline;
+    width: 75%;
+    font-family: Orbitron;
+    font-weight: bold;
+      color:#002577;
+   
+}
 
 #next-to{
     display: inline;
