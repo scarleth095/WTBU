@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>WTBU Radio</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="WTBU website">
+      <meta name="author" content="Scarleth Estevez">
+        <link rel="icon" href="../Drawing.png">
+      <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+      <link href='https://fonts.googleapis.com/css?family=Orbitron:400,700,900,500' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="../Programming_Schedule/style.css">
+   </head>
+   <body>
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>                        
+               </button>
+               <a class="navbar-brand" href="../index.html"><span class="spacing"><font color ="#bf2e26">WTBU RADIO</font></span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+               <ul class="nav navbar-nav">
+                  <li><a href="../index.html">Home</a></li>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="">Programming <span class="caret"></span></a>
+                     <ul class="dropdown-menu">
+                        <li><a href="../Programming_Schedule/index.html">Schedule</a></li>
+                        <li><a href="../Studio-Sessions/index.html">Studio Sessions</a></li>
+                        <li><a href="../Music-Reviews/index.html">Music Reviews</a></li>
+                         <li><a href="../Interview/index.html">Interviews</a></li>
+                     </ul>
+                  </li>
+                  <li><a href="http://sportswtbu.com/">Sports</a></li>
+                  <li><a href="http://wtbunews.org/">News</a></li>
+                  <li><a href="../BUITM/index.html">BUITM</a></li>
+                  <li x><a href="../The_Beat/index.html">The Beat</a></li>
+                  <li><a href="../Events/index.html">Events</a></li>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Interact <span class="caret"></span></a>
+                     <ul class="dropdown-menu">
+                        <li><a href="../about-us/index.html">About Us</a></li>
+                        <li ><a href="../Contact-Us/index.html">Contact Us</a></li>
+                        <li><a href="../Underwriting/index.html">Underwriting</a></li>
+                        <li><a href="../Donate/index.html">Donate</a></li>
+                        <li><a href="../Download-App/index.html">Download our App</a></li>
+                     </ul>
+                  </li>
+               </ul>
+                <ul class="nav navbar-nav navbar-right">
+                <div class="btn-group" role="group" aria-label="...">
+                 <a  href="listen.m3u" type="button" class="btn btn-danger navbar-btn"> Listen Live</a>
+                
+               <button type="button" class="btn btn-danger navbar-btn play"><i class="fa fa-play-circle fa-lg"></i></button>
+                 <button type="button" class="btn btn-danger navbar-btn pause"><i class="fa fa-pause-circle fa-lg"></i></button>
+                      
+                    <span>&nbsp;&nbsp;</span>
+                  
+                    
+
+ 
+                    </div>
+               
+                </ul>
+          </div>
+          </div>
+
+         
+      </nav>
+      <header>
+         <center>
+            <p class="pad3"></p>
+            <div class="jumbotron">
+               <div id="frame-back">
+                  <div id="next-to">
+                     Now Playing:
+                  </div>
+                  <div id="frame">
+                     <marquee behavior="scroll" direction="left">
+                        <iframe id="spin-iframe" class="spin-songs"
+                           src="http://spinitron.com/public/newestsong.php?num=1&amp;station=wtbu&amp;styles=body,*{font-size: 15px;color: black !important;}&amp;stylesheet=http%3A%2F%2Fspinitron.bitbucket.org%2Fspin.css"
+                           width="100%" height="200" align="right"  scrolling="no"
+                           >
+                        </iframe>
+                     </marquee>
+                  </div>
+               </div>
+
+                
+            </div>
+            <style> .Title{
+               font-family: Orbitron;
+               letter-spacing: 4px;
+               color: firebrick;
+               }
+                
+                #spin-iframe2{
+                    height: 800px;
+                    width: 100%;
+                }
+            
+            </style>
+         </center>
+      </header>
+
+       
+       <div id="wrapper" class="clear">
+           <center>
+               <h2 class="Title">Spring 2016 Schedule</h2>
+    <div id="spin-wrap spin-sched">
+        <iframe id="spin-iframe2" class="spin-sched"
+            src="http://spinitron.com/radio/playlist.php?station=wtbu&amp;show=schedule&amp;ptype=d&amp;ifh=1&amp;css=schedule.css">
+        </iframe>
+       
+    </div>
+           </center>
+       </div>
+               
+
+
+ 
+
+       
+       
+       
+       
+      <center>
+         <div class="footer">
+            <p id="minor-pad"></p>
+            <p>
+               <a class="icon-pad" href="https://www.facebook.com/wtburadio"><i class="fa fa-facebook-square fa-4x"></i></a>
+               <a class="icon-pad" href="https://twitter.com/WTBU"><i class="fa fa-twitter-square fa-4x"></i></a>
+               <a class="icon-pad" href="https://www.instagram.com/wtbu/"><i class="fa fa-instagram fa-4x"></i></a>
+               <a class="icon-pad" href="http://wtburadio.tumblr.com/"><i class="fa fa-tumblr-square fa-4x"></i></a>
+            </p>
+            <p>
+               <small>&copy; 2016 WTBU</small>
+            </p>
+         </div>
+      </center>
+      <!--START SCRIPT -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="../script2.js"></script>
+     
+    
+
+      <!--END SCRIPT -->
+   </body>
+</html>
